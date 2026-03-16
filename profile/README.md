@@ -24,8 +24,8 @@ For teams evaluating larger deployments, Helix Enterprise uses an object-storage
 Helix Enterprise uses Helix's hyperscale architecture to run graph-vector workloads across very large datasets stored in S3-compatible object storage.
 
 - Stateless cluster nodes for flexible horizontal and vertical scaling
-- Encryption at rest, backups, and point-in-time recovery
 - RBAC, monitoring, and enterprise controls
+- Supports essentially infinite scaling across TBs of data
 
 ## Start Here
 
