@@ -68,10 +68,10 @@ Helix Cloud runs the graph, vector, and text engines on durable object storage. 
 
 ## Explore the ecosystem
 
-| Repository | What it is |
+| Project | What it is |
 | --- | --- |
 | [`helix-db`](https://github.com/HelixDB/helix-db) | The database engine, CLI, SDKs, and local development workflow. |
-| [`graphify-v8`](https://github.com/HelixDB/graphify-v8) | Turn codebases, schemas, documents, and other sources into a queryable knowledge graph. |
+| [Documentation](https://docs.helix-db.com) | Guides for local development, SDKs, querying, indexing, and Helix Cloud. |
 | [`skills`](https://github.com/HelixDB/skills) | Agent skills for authoring, translating, and optimizing HelixDB queries. |
 
 ---
