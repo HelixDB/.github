@@ -1,36 +1,85 @@
 <div align="center">
 
-# HelixDB
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HelixDB/helix-db/main/assets/full_logo_dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HelixDB/helix-db/main/assets/full_logo_light.png">
+  <img alt="HelixDB" src="https://raw.githubusercontent.com/HelixDB/helix-db/main/assets/full_logo_light.png" width="560">
+</picture>
 
-Graph-vector database built in Rust for developers building AI, agent, and knowledge applications.
+### The database for AI memory
 
-[Website](https://helix-db.com) · [Docs](https://docs.helix-db.com) · [Open Source](https://github.com/HelixDB/helix-db)
+Knowledge graphs, vectors, full-text search, and transactional application data in one Rust engine — built for agents, GraphRAG, and company brains.
+
+[Website](https://helix-db.com) · [Documentation](https://docs.helix-db.com) · [Get started](https://docs.helix-db.com/cli/getting-started) · [Discord](https://discord.gg/2stgMPr5BD)
+
+[![GitHub stars](https://img.shields.io/github/stars/HelixDB/helix-db?style=flat&logo=github&label=Stars)](https://github.com/HelixDB/helix-db)
+[![Docs](https://img.shields.io/badge/docs-latest-5b5bd6)](https://docs.helix-db.com)
+[![Discord](https://img.shields.io/discord/1354148209005559819?logo=discord&label=Discord)](https://discord.gg/2stgMPr5BD)
 
 </div>
 
-HelixDB combines graph traversal, vector search, and HelixQL, a strongly typed compiled query language, in one platform. Build locally with the open-source core, deploy with Helix Cloud, and scale into larger production workloads without stitching together separate graph and vector systems.
+## Give your AI connected context
 
-For teams evaluating larger deployments, Helix Enterprise uses an object-storage-backed architecture for large-scale, multi-tenant search and retrieval of knowledge and context.
+Vector search finds similar things. Graph traversal explains how they are connected. HelixDB combines both with BM25 full-text search and transactional application data, so your AI can retrieve richer context without stitching together multiple databases.
 
-## Why HelixDB
+| Graph-native | Hybrid retrieval | Application-ready |
+| --- | --- | --- |
+| Model entities, relationships, and typed properties as a labeled property graph. | Combine graph traversal, approximate vector search, and BM25 in the same system. | Use full ACID transactions and type-safe SDKs for Rust, TypeScript, Go, and Python. |
 
-- Graph and vector workloads in one system for AI, retrieval, and knowledge applications
-- Strongly typed, compiled HelixQL queries for safer developer workflows
-- Built in Rust for high performance and low-latency query execution
-- Private-by-default deployments with authenticated query access
+## Start in minutes
 
-## Helix Enterprise
+```bash
+# Install the CLI
+curl -sSL "https://install.helix-db.com" | bash
 
-Helix Enterprise uses Helix's hyperscale architecture to run graph-vector workloads across very large datasets stored in S3-compatible object storage.
+# Create and run a local project (requires Docker or Podman)
+mkdir my-helix-app && cd my-helix-app
+helix init local
+helix start dev
 
-- Stateless cluster nodes for flexible horizontal and vertical scaling
-- RBAC, monitoring, and enterprise controls
-- Supports essentially infinite scaling across TBs of data
+# Run the generated example query
+helix query dev --file examples/request.json
+```
 
-## Start Here
+Local instances start in memory for a fast development loop. Use `helix start dev --disk` when you want data to persist across restarts.
 
-- [Read the docs](https://docs.helix-db.com)
-- [Visit the website](https://helix-db.com)
-- [Install the CLI and deploy your first project](https://docs.helix-db.com/documentation/cli-v2/getting-started)
-- [Learn HelixQL](https://docs.helix-db.com/documentation/hql/hql)
-- [Explore Helix Enterprise](https://docs.helix-db.com/enterprise/overview)
+Want an agent to bootstrap the project? Run `helix chef` to scaffold HelixDB, seed starter data, install the Helix skills and docs integration, and hand the build to Codex, Claude Code, or OpenCode.
+
+## Build with Helix
+
+Author strongly typed queries in your application and send them directly to a running instance — no separate query deployment step.
+
+- [Rust SDK](https://docs.helix-db.com/database/rust-project-setup)
+- [TypeScript SDK](https://docs.helix-db.com/database/typescript-project-setup)
+- [Go SDK](https://docs.helix-db.com/database/go-project-setup)
+- [Python SDK](https://docs.helix-db.com/database/python-project-setup)
+- [Querying guide](https://docs.helix-db.com/database/querying-guide/overview)
+
+## Scale with Helix Cloud
+
+Helix Cloud runs the graph, vector, and text engines on durable object storage. A gateway routes requests to a dedicated writer and horizontally scaling readers, while tiered memory and SSD caches keep hot data close to compute.
+
+- Object storage is the durable system of record
+- Readers auto-scale independently with query load
+- Serializable transactions provide full ACID guarantees
+- High-availability deployments span multiple gateways and database nodes
+
+[Explore the architecture](https://docs.helix-db.com/database/architecture) · [Get started with Helix Cloud](https://helix-db.com/login)
+
+## Explore the ecosystem
+
+| Project | What it is |
+| --- | --- |
+| [`helix-db`](https://github.com/HelixDB/helix-db) | The database engine, CLI, SDKs, and local development workflow. |
+| [Documentation](https://docs.helix-db.com) | Guides for local development, SDKs, querying, indexing, and Helix Cloud. |
+| [`skills`](https://github.com/HelixDB/skills) | Agent skills for authoring, translating, and optimizing HelixDB queries. |
+
+---
+
+<div align="center">
+
+**Just use Helix.**
+
+[Star HelixDB](https://github.com/HelixDB/helix-db) · [Join the community](https://discord.gg/2stgMPr5BD) · [Follow on X](https://x.com/helixdb)
+
+</div>
